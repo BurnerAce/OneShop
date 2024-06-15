@@ -35,7 +35,7 @@ const AddItem = () => {
         Object.keys(item).forEach(key => formData.append(key, item[key]));
         console.log(owner);
         // await axios.post('http://localhost:5000/addItems', formData);
-        await axios.post(`http://localhost:5000/addItems?collect=${owner.collect}`, item);
+        await axios.post(`https://one-shop-backend-burnerace.vercel.app/addItems?collect=${owner.collect}`, item);
         console.log("DONE");
         navigate('/preitems');
     };

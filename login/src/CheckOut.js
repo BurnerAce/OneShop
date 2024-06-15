@@ -12,7 +12,7 @@ const Check = () => {
         const fetchOrders = async () => {
             try {
                 if (user && user.email) { // Check if user and user.email are defined
-                    const res = await axios.get(`http://localhost:5000/corders?customer=${user.email}`);
+                    const res = await axios.get(`https://one-shop-backend-burnerace.vercel.app/corders?customer=${user.email}`);
                     setOrders(res.data.item);
                     console.log(res.data.item);
                 }

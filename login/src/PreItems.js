@@ -22,7 +22,7 @@ const PreItems = () => {
     const fetchItems = async () => {
         if (storeRef.current) {
             try {
-                const res = await axios.get(`http://localhost:5000/items?collect=${storeRef.current.collect}`);
+                const res = await axios.get(`https://one-shop-backend-burnerace.vercel.app/items?collect=${storeRef.current.collect}`);
                 setItems(res.data.item);
                 console.log(res.data.item);
             } catch (error) {

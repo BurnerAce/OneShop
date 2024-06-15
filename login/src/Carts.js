@@ -35,7 +35,7 @@ const Cart = () => {
             status : 'pending'
         }
         console.log(order);
-        await axios.post(`http://localhost:5000/orders?collect=${storeRef.current.collect}&name=${storeRef.current.shop}`, order);
+        await axios.post(`https://one-shop-backend-burnerace.vercel.app/orders?collect=${storeRef.current.collect}&name=${storeRef.current.shop}`, order);
         localStorage.removeItem(cartKey);
         alert('Proceeding to checkout...');
         navigate('/checkout');

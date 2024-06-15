@@ -22,7 +22,7 @@ const LoginForm = () => {
         e.preventDefault();
 
         try {
-            const res = await axios.post('http://localhost:5000/login', formData);
+            const res = await axios.post('https://one-shop-backend-burnerace.vercel.app/login', formData);
             setMessage(res.data.message);
             console.log(res.data);
             if (res && res.data && res.data.message === "Login successful") {
@@ -36,7 +36,7 @@ const LoginForm = () => {
                 const user = res.data.user;
                 console.log(user);
                 console.log("Done");
-                const storesRes = await axios.get('http://localhost:5000/stores');
+                const storesRes = await axios.get('https://one-shop-backend-burnerace.vercel.app/stores');
                 const stores=storesRes.data.store;
                 console.log("done366");
                 console.log(stores);

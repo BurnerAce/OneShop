@@ -25,7 +25,7 @@ const OwnerSignup = () => {
 
         console.log('Submitting form...');
         try {
-            const res = await axios.post('http://localhost:5000/osignup', formData);
+            const res = await axios.post('https://one-shop-backend-burnerace.vercel.app/osignup', formData);
             console.log('Response:', res.data);
             navigate('/ologin'); // Redirect to login page on successful signup
         } catch (err) {

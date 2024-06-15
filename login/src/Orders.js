@@ -12,7 +12,7 @@ const Orders = () => {
         const fetchOrders = async () => {
             try {
                 if (owner) {
-                    const res = await axios.get(`http://localhost:5000/forders?collect=${owner.collect}`);
+                    const res = await axios.get(`https://one-shop-backend-burnerace.vercel.app/forders?collect=${owner.collect}`);
                     setOrders(res.data.item);
                     console.log(res.data.item);
                 }
@@ -27,7 +27,7 @@ const Orders = () => {
 
     const handleAccept = async (orderId) => {
         try {
-            await axios.put(`http://localhost:5000/updateOr?collect=${owner.collect}&itemId=${orderId}`, { status: 'accepted' });
+            await axios.put(`https://one-shop-backend-burnerace.vercel.app/updateOr?collect=${owner.collect}&itemId=${orderId}`, { status: 'accepted' });
             // Update the local state to reflect the change
             setOrders(prevOrders => prevOrders.map(order => {
                 if (order._id === orderId) {
@@ -49,7 +49,7 @@ const Orders = () => {
 
     const handleReject = async (orderId) => {
         try {
-            await axios.put(`http://localhost:5000/updateOr?collect=${owner.collect}&itemId=${orderId}`, { status: 'rejected' });
+            await axios.put(`https://one-shop-backend-burnerace.vercel.app/updateOr?collect=${owner.collect}&itemId=${orderId}`, { status: 'rejected' });
             // Update the local state to reflect the change
             setOrders(prevOrders => prevOrders.map(order => {
                 if (order._id === orderId) {

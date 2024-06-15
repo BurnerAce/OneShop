@@ -22,7 +22,7 @@ const SignupForm = () => {
 
         console.log('Submitting form...');
         try {
-            const res = await axios.post('https://one-shop-5kjf.vercel.app//signup', formData);
+            const res = await axios.post('https://one-shop-backend-burnerace.vercel.app/signup', formData);
             console.log('Response:', res.data);
             navigate('/clogin'); // Redirect to login page on successful signup
         } catch (err) {

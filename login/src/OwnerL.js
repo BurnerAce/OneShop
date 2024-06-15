@@ -22,7 +22,7 @@ const OwnerLogin = () => {
         e.preventDefault();
 
         try {
-            const res = await axios.post('http://localhost:5000/ologin', formData);
+            const res = await axios.post('https://one-shop-backend-burnerace.vercel.app/ologin', formData);
             setMessage(res.data.message);
             console.log(res.data);
             if (res && res.data && res.data.message === "Login successful") {
