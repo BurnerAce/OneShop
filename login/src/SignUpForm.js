@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; // Import useHistory
+axios.defaults.withCredentials = true;
 
 const SignupForm = () => {
     const navigate = useNavigate(); // Initialize useHistory
@@ -12,7 +13,7 @@ const SignupForm = () => {
         password: '',
         location: ''
     });
-    axios.defaults.withCredentials = true;
+    
     const { name, phone, email, password, location } = formData;
 
     const handleChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
