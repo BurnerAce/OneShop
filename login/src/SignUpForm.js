@@ -12,7 +12,7 @@ const SignupForm = () => {
         password: '',
         location: ''
     });
-
+    axios.defaults.withCredentials = true;
     const { name, phone, email, password, location } = formData;
 
     const handleChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
