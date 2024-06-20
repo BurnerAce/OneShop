@@ -46,6 +46,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 const client = new MongoClient(url, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    tls: true,
+    tlsAllowInvalidCertificates: true,
     serverApi: {
         version: ServerApiVersion.v1,
         strict: true,
