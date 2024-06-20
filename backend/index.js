@@ -9,7 +9,7 @@ const app = express();
 
 
 const corsOptions = {
-    origin: 'https://one-shop-burnerace.vercel.app',
+    origin: 'https://one-shop-orcin.vercel.app',
     credentials: true,
     methods: ["POST", "GET", "PUT", "DELETE"],
     optionsSuccessStatus: 200,
